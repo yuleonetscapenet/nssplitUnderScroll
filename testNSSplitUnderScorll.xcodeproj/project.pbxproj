@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE79B5371C2DD4C80057BACD /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79B5351C2DD4C80057BACD /* myViewController.m */; };
+		FE79B5381C2DD4C80057BACD /* myViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE79B5361C2DD4C80057BACD /* myViewController.xib */; };
+		FE7D62DE1C30C83400DA02C1 /* myScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D62DD1C30C83400DA02C1 /* myScrollView.m */; };
+		FE7D62E11C30E13D00DA02C1 /* myTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D62E01C30E13D00DA02C1 /* myTableView.m */; };
+		FE7D62E41C30E3FE00DA02C1 /* mySplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D62E31C30E3FE00DA02C1 /* mySplitView.m */; };
 		FEA3D4521C2CB276005B5A16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3D4511C2CB276005B5A16 /* AppDelegate.m */; };
 		FEA3D4551C2CB276005B5A16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3D4541C2CB276005B5A16 /* main.m */; };
 		FEA3D4571C2CB276005B5A16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA3D4561C2CB276005B5A16 /* Assets.xcassets */; };
@@ -14,6 +19,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE79B5341C2DD4C80057BACD /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
+		FE79B5351C2DD4C80057BACD /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
+		FE79B5361C2DD4C80057BACD /* myViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myViewController.xib; sourceTree = "<group>"; };
+		FE7D62DC1C30C83400DA02C1 /* myScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myScrollView.h; sourceTree = "<group>"; };
+		FE7D62DD1C30C83400DA02C1 /* myScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myScrollView.m; sourceTree = "<group>"; };
+		FE7D62DF1C30E13D00DA02C1 /* myTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myTableView.h; sourceTree = "<group>"; };
+		FE7D62E01C30E13D00DA02C1 /* myTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myTableView.m; sourceTree = "<group>"; };
+		FE7D62E21C30E3FE00DA02C1 /* mySplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySplitView.h; sourceTree = "<group>"; };
+		FE7D62E31C30E3FE00DA02C1 /* mySplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySplitView.m; sourceTree = "<group>"; };
 		FEA3D44D1C2CB276005B5A16 /* testNSSplitUnderScorll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testNSSplitUnderScorll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA3D4501C2CB276005B5A16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEA3D4511C2CB276005B5A16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,8 +71,17 @@
 				FEA3D4511C2CB276005B5A16 /* AppDelegate.m */,
 				FEA3D4561C2CB276005B5A16 /* Assets.xcassets */,
 				FEA3D4581C2CB276005B5A16 /* MainMenu.xib */,
+				FE7D62DC1C30C83400DA02C1 /* myScrollView.h */,
+				FE7D62DD1C30C83400DA02C1 /* myScrollView.m */,
 				FEA3D45B1C2CB276005B5A16 /* Info.plist */,
 				FEA3D4531C2CB276005B5A16 /* Supporting Files */,
+				FE79B5341C2DD4C80057BACD /* myViewController.h */,
+				FE79B5351C2DD4C80057BACD /* myViewController.m */,
+				FE79B5361C2DD4C80057BACD /* myViewController.xib */,
+				FE7D62DF1C30E13D00DA02C1 /* myTableView.h */,
+				FE7D62E01C30E13D00DA02C1 /* myTableView.m */,
+				FE7D62E21C30E3FE00DA02C1 /* mySplitView.h */,
+				FE7D62E31C30E3FE00DA02C1 /* mySplitView.m */,
 			);
 			path = testNSSplitUnderScorll;
 			sourceTree = "<group>";
@@ -129,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEA3D4571C2CB276005B5A16 /* Assets.xcassets in Resources */,
+				FE79B5381C2DD4C80057BACD /* myViewController.xib in Resources */,
 				FEA3D45A1C2CB276005B5A16 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7D62E11C30E13D00DA02C1 /* myTableView.m in Sources */,
+				FE79B5371C2DD4C80057BACD /* myViewController.m in Sources */,
+				FE7D62DE1C30C83400DA02C1 /* myScrollView.m in Sources */,
+				FE7D62E41C30E3FE00DA02C1 /* mySplitView.m in Sources */,
 				FEA3D4551C2CB276005B5A16 /* main.m in Sources */,
 				FEA3D4521C2CB276005B5A16 /* AppDelegate.m in Sources */,
 			);
@@ -281,6 +309,7 @@
 				FEA3D4601C2CB276005B5A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

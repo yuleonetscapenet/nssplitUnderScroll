@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,8 +12,10 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="myScrollView" destination="3If-1G-ccA" id="lql-xv-MP3"/>
+                <outlet property="mySplitView" destination="FW7-wK-nnX" id="xCm-dq-72B"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -670,10 +673,43 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3If-1G-ccA" customClass="myScrollView">
+                        <rect key="frame" x="52" y="118" width="271" height="200"/>
+                        <clipView key="contentView" id="OOL-Av-Jn1">
+                            <rect key="frame" x="1" y="1" width="269" height="198"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <splitView misplaced="YES" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FW7-wK-nnX" customClass="mySplitView">
+                                    <rect key="frame" x="0.0" y="102" width="1000" height="0.0"/>
+                                </splitView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="FW7-wK-nnX" firstAttribute="leading" secondItem="OOL-Av-Jn1" secondAttribute="leading" id="FzJ-YW-yQD"/>
+                                <constraint firstItem="FW7-wK-nnX" firstAttribute="top" secondItem="OOL-Av-Jn1" secondAttribute="top" id="ZdI-Tz-RWR"/>
+                                <constraint firstAttribute="bottom" secondItem="FW7-wK-nnX" secondAttribute="bottom" id="h12-uV-2LW"/>
+                            </constraints>
+                        </clipView>
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="FYV-W4-hSl">
+                            <rect key="frame" x="1" y="183" width="269" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="FSk-y8-aA8">
+                            <rect key="frame" x="254" y="1" width="16" height="198"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3If-1G-ccA" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="2yT-z1-O3a"/>
+                    <constraint firstAttribute="trailing" secondItem="3If-1G-ccA" secondAttribute="trailing" id="HJu-Pr-Gx9"/>
+                    <constraint firstAttribute="bottom" secondItem="3If-1G-ccA" secondAttribute="bottom" id="p2o-e9-ubD"/>
+                    <constraint firstItem="3If-1G-ccA" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="qO4-HG-FHA"/>
+                </constraints>
             </view>
         </window>
     </objects>
