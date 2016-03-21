@@ -35,6 +35,8 @@
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSLog(@"viewfortale");
+    
     NSTableCellView *result = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
     result.textField.stringValue = @"test string";
     return result;
@@ -43,6 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+     NSLog(@"view did load");
 }
 
 @end

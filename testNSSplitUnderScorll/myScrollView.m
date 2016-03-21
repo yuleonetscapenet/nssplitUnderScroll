@@ -17,6 +17,16 @@
 }
 
 
+- (void)scrollWheel:(NSEvent *)theEvent
+{
+    if ([theEvent deltaX] != 0 && [theEvent deltaY] == 0)
+    {
+        [[self nextResponder] scrollWheel:theEvent];
+    }
+    
+}
+
+
 /*
 - (void)mouseDown:(NSEvent *)theEvent {
     

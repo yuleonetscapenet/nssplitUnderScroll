@@ -17,7 +17,6 @@
 @property(strong,nonatomic) myViewController *viewCtrl2;
 @property(strong, nonatomic)myViewController *viewCtrl3;
 @property(strong, nonatomic)myViewController *viewCtrl4;
-@property(strong, nonatomic)myViewController *viewCtrl5;
 
 
 @property (weak) IBOutlet NSWindow *window;
@@ -27,9 +26,7 @@
 
 -(void) loadTablesIntoSplitView
 {
-   // NSRect frame = NSMakeRect(0, 0, 100, 200);
     self.viewCtrl = [[myViewController alloc]init];
-   // self.viewCtrl.view.frame = frame;
     [_mySplitView addSubview:self.viewCtrl.view];
 
     self.viewCtrl2 = [[myViewController alloc]init];
@@ -38,34 +35,28 @@
     self.viewCtrl3 = [[myViewController alloc]init];
     [_mySplitView addSubview:self.viewCtrl3.view];
     
-    self.viewCtrl5 = [[myViewController alloc]init];
-    [_mySplitView addSubview:self.viewCtrl5.view];
-    
     self.viewCtrl4 = [[myViewController alloc]init];
     [_mySplitView addSubview:self.viewCtrl4.view];
-     
+       
+    //scroll manually
+    [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:1.0];
+        NSClipView* clipView = [_myScrollView contentView];
+        NSPoint newOrigin = [clipView bounds].origin;
+        newOrigin.x = [_myScrollView contentView].frame.size.width ;
+        [[clipView animator] setBoundsOrigin:newOrigin];
+    [NSAnimationContext endGrouping];
+    
+    int num = [_mySplitView.subviews count];
+    NSLog(@"children = %d", num);
 }
 
-
--(void) loadTablesOnly
-{
-    myViewController *viewCtrl = [[myViewController alloc]init];
-    [_mySplitView addSubview:viewCtrl.view];
-
-}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
-   // NSRect frame = NSMakeRect(0, 0, 300, 400);
-   // _mySplitView.frame = frame;
-    
-    
-   // _myScrollView.frame = _window.contentView.frame;
-   // _mySplitView.frame = _myScrollView.frame;
-    
     [self loadTablesIntoSplitView];
-    
+    NSLog(@"done");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
